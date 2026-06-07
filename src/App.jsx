@@ -93,7 +93,7 @@ function Catalog() {
 function Product({productData}) {
   return (
     <li className={productData.soldOut ? "product sold-out" : "product"}>
-      <img src={productData.photoName}  alt="" />
+      <img src={import.meta.env.BASE_URL + productData.photoName.replace('/', '')} />
       <div>
         <h3>{productData.name}</h3>
         <p>{productData.description}</p>
